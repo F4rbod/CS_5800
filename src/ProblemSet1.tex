@@ -1,0 +1,76 @@
+\begin{document}
+
+    CS 5800 Summer 2022\hfill Problem Set \#1\\
+    Chapter 0\\
+    Farbod Alinezhad (05/17)
+
+    \hrulefill
+
+    \tableofcontents
+    \newpage
+
+
+    \section{Question 0.1.}\label{sec:question-1}
+    \begin{enumerate}[(a)]
+        \item $f=\Theta(g)$ as n dominates both
+        \item $f=O(g)$ as $2/3>1/2$
+        \item $f=\Theta(g)$ as n dominates both
+        \item $f=\Theta(g)$ as n dominates both
+        \item $f=\Theta(g)$ as $\log{n}$ dominates both
+        \item $f=\Theta(g)$ as $\log{n}$ dominates both
+        \item $f=\Omega(g)$ as $1.01>1$
+        \item $f=\Omega(g)$ as $2>1$
+        \item $f=\Omega(g)$ as f is a polynomial, which dominates log
+        \item $f=O(g)$  as n dominates log
+        \item $f=\Omega(g)$ as n is a polynomial, which dominates log
+        \item $f=O(g)$ as g is an exponent, which dominates polynomial
+        \item $f=O(g)$ as $3>2$
+        \item $f=\Theta(g)$ as both are exponents of two. The plus 1 can be omitted as it is just a multiplication by 2
+        \item $f=\Omega(g)$ as factorial dominates exponent
+        \item $f=\Omega(g)$ as both are exponents but log can grow larger than 2 asymptotically
+        \item f becomes $1^k+2^k+\dots+n^k$ where $n^k$dominates it. So $f=O(g)$ since $k<k+1$
+    \end{enumerate}
+    \newpage
+
+
+    \section{Question 0.2.}\label{sec:question-2}
+    \begin{enumerate}[(a)]
+        \item if $c<1$ then all polynomials of c are less than 1. So 1 dominates the function. Hence, $g(n) = \Theta(1)$
+        \item if $c=1$ then g becomes $1+nc$ where n dominaes it. Hence, $g(n) = \Theta(n)$
+        \item if $c>1$ then g becomes $1+c+c^2+\dots+c^n$ where $c^n$ dominaes it. Hence, $g(n) = \Theta(c^n)$
+
+    \end{enumerate}
+    \newpage
+
+
+    \section{Question 0.4.}\label{sec:question-4}
+    \begin{enumerate}[(a)]
+        \item
+        \[
+            \begin{bmatrix}
+                a & b \\
+                c & d \\
+            \end{bmatrix}
+            .
+            \begin{bmatrix}
+                w & x \\
+                y & z \\
+            \end{bmatrix}
+            =
+            \begin{bmatrix}
+                $a*w+b*y$ & $a*x+b*z$ \\
+                $c*w+d*y$ & $c*x+d*z$ \\
+            \end{bmatrix}
+        \]
+        which includes 8 multiplications and 4 additions.
+
+        \item
+        We can easily use exponentian by squaring here.\cite{ExponentiationSquaring2022}
+        Then, it is easy to calculate the nth exponent of the
+        matrix (hence the nth Fibonacci) using a recursion. This makes the big O $\log(n)$ as the number of recursions
+        needed to get to the nth power of the matrix is $\log(n)$.
+
+    \end{enumerate}
+
+
+\end{document}
